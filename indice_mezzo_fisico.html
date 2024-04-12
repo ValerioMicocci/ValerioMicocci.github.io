@@ -1,0 +1,70 @@
+<html>
+<head>
+<style>
+body {
+  background-color: rgb(175, 225, 241);
+}
+</style>
+<title>mezzo fisico</title>
+</head>
+<body>
+
+<center><h1 style="color:rgb(154, 108, 163);"><b>Mezzo Fisico</b></h1></center>
+<h1 style="color:MediumSeaGreen;" ><b>IEEE 802.3</b></h1>
+<pre>
+  Il MAC IEEE 802.3 utilizza il metodo di accesso al mezzo CSMA/CD; nel caso di collisione, la stazione sospende la trasmissione e invia a tutte le stazioni della rete, una sequenza di 32 bit, detta sequenza di Jamming per avvisarle 
+  dell’avvenuta collisione
+  e scartare il frame corrotto. In ogni stazione ricevente il livello fisico passa al MAC la stringa di bit ricevuti ed effettua i seguenti controlli:
+  <img src="https://www.ionos.it/digitalguide/fileadmin/DigitalGuide/Screenshots_2019/ethernet-2.png" width="350"  style="float:right;margin: 10px">
+  <ul>
+  <li> Verifica, attraverso l’indirizzo destinazione, se il frame è diretto alla stazione o se deve essere scartato;</li>
+  <li>Controlla, attraverso l’ispezione del campo FCS, la possibilità che ci siano stati errori durante la trasmissione;</li>
+  <li>Verifica la lunghezza minima del frame e se la lunghezza del frame è coerente con quella contenuta nel campo “Lunghezza”;</li>
+  <li>Infine controlla se il numero degli ottetti è un numero intero;</li>
+  <li> Le prestazioni del CSMA/CD dipendono dal numero delle stazioni presenti nella rete e da quanto queste sono attive nella trasmissione dei frame;</li>
+ </ul>
+
+
+Inizialmente ogni messaggio inviato all’interno di una rete andava essenzialmente a tutti i dispositivi, i quali dovevano quindi filtrare i dati ricevuti e decidere se fossero per loro rilevanti. Questo bus (acronimo di Binary Unit System) 
+condiviso abilitava i messaggi broadcast, ma registrava anche tutto il traffico per ciascun membro, il che rappresentava chiaramente una falla di sicurezza della prima Ethernet.
+Sebbene i dati potessero essere crittografati, il traffico stesso non poteva essere controllato individualmente. Persino gli hub non possono proteggere da questa vulnerabilità. Nelle reti moderne sono di aiuto Bridges e Switches, che si 
+possono utilizzare per segmentare una Ethernet.Tuttavia queste tecniche non risolvono tutti i problemi: l’abuso, ad esempio attraverso il flooding MAC o lo spoofing MAC continuano a rappresentare una minaccia per la sicurezza dei pacchetti 
+di dati comunicati. Il funzionamento sicuro in una rete Ethernet richiede pertanto l’uso serio di tutti i sistemi connessi e un’analisi regolare dei dati (ad esempio l’analisi LAN) al fine di rilevare casi teorici di abuso e malfunzionamenti.
+
+Finché la quantità di dati non sovraccarica l’Ethernet, funziona tutto bene. Tuttavia l’utilizzo della capacità di oltre il 50 percento può portare a un congestionamento dei dati. Con l’evoluzione della tecnologia dei personal computer e il 
+volume sempre crescente di dati, anche le reti Ethernet hanno dovuto evolversi per rimanere al passo con i progressi tecnologici. Gli switch, ad esempio, garantiscono una distribuzione più efficiente dei pacchetti di dati e riducono il rischio 
+di collisione. Le moderne tecnologie via cavo come il twisted pair e la fibra hanno velocità di trasmissione più elevate che soddisfano le moderne esigenze della rete.
+
+Un’altra innovazione è l’“Ethernet Flow Control”, meccanismo con il quale la trasmissione dei dati può essere temporaneamente interrotta completamente al fine di facilitare il flusso di dati altrove. 
+In modalità full-duplex ciò è particolarmente utile quando una rete sta servendo un numero relativamente grande di terminali. Quindi il controllo del flusso taglia temporaneamente alcuni membri della rete per ottimizzare l’affidabilità 
+complessiva della rete stessa. Tuttavia ciò può comportare dei rallentamenti, che a loro volta si possono contenere tramite altri meccanismi come il Transmission Control Protocol.
+
+In passato Ethernet utilizzava principalmente cavi coassiali convenzionali. Tuttavia i cavi in rame twisted pair e i cavi in fibra ottica sono ormai lo standard nel settore, consentendo velocità di trasferimento più elevate e un maggiore raggio 
+d’azione.Un ulteriore vantaggio è che i cavi di rame possono anche alimentare i dispositivi collegati con la corrente. Questo processo, noto anche come “Power over Ethernet” (PoE), rende le reti più efficienti dal punto di vista energetico 
+ed è definito in IEEE 802.3af.
+
+
+<h1 style="color:MediumSeaGreen;" ><b>IEEE 802.11</b></h1>
+802.11 è il nome generico di una famiglia di standard per le reti wireless correlate al Wi-Fi.
+
+Lo schema di numerazione per 802.11 proviene dall’Institute of Electrical and Electronics Engineers (IEEE), che utilizza “802” come nome di un comitato per gli standard di rete che include Ethernet (IEEE 802.3). 
+“11” si riferisce al gruppo di lavoro sulle reti locali senza fili (WLAN) all’interno del comitato 802.
+
+Gli standard IEEE 802.11 definiscono regole specifiche per la comunicazione WLAN. I più noti di questi standard includono 802.11g , 802.11n e 802.11ac.
+
+802.11 (senza suffisso di lettera) era lo standard originale in questa famiglia, ratificato nel 1997. 802.11 ha stabilito la comunicazione di rete locale wireless come alternativa principale a Ethernet. Essendo una tecnologia di 
+prima generazione, l’802.11 presentava gravi limitazioni che ne impedivano l’utilizzo in prodotti commerciali,  come  una velocità di trasmissione dati, ad esempio,  di 1-2 Mbps. 802.11 è stato rapidamente migliorato e reso obsoleto 
+in due anni sia da 802.11a che da 802.11b.
+Ogni nuovo standard all’interno della famiglia 802.11 riceve un nome con nuove lettere aggiunte . Dopo 802.11a  e 802.11b, sono stati creati nuovi standard e le generazioni
+ successive dei protocolli Wi-Fi primari sono state implementate in questo ordine:
+<ul>
+<li><b>802.11g (ratificato nel 2003)</b></li>  
+<li><b>802.11n (ratificato nel 2009)</b></li>
+<li><b>802.11ac (ratificato nel 2013)</b></li>
+</ul>
+Parallelamente a questi importanti aggiornamenti, il gruppo di lavoro IEEE 802.11 ha sviluppato molti altri protocolli correlati e altre modifiche. L’IEEE generalmente assegna i nomi nell’ordine in cui i gruppi di lavoro vengono
+avviati piuttosto che quando lo standard è completato.
+</pre>
+
+</body>
+</html>
