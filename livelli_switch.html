@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>livelli dello switch</title>
+    </head>
+    <body bgcolor="	#f0ffff">
+        <center><h1>LIVELLI SWITCH</h1></center>
+        <pre>
+        <h1><b>Funzionalità e specifiche dei livelli</b></h1>
+    Mentre gli switch possono conoscere le topologie su molti livelli e inoltrare su uno o più livelli, tendono ad avere caratteristiche comuni. Oltre alle applicazioni ad alte prestazioni, 
+    i moderni switch commerciali utilizzano principalmente interfacce Ethernet.
+
+    A qualsiasi livello, uno switch moderno può implementare Power over Ethernet (PoE), che evita la necessità per i dispositivi collegati, come un telefono VoIP o un punto di accesso wireless, di avere un'alimentazione separata. 
+    Poiché gli switch possono avere circuiti di alimentazione ridondanti collegati a Uninterruptible Power Supply,il dispositivo collegato può continuare a funzionare anche in caso di interruzione della normale alimentazione.
+    <b><h2>Livello 1</h2></b>
+         Un hub di rete, o un ripetitore, è un semplice dispositivo di rete che non gestisce il traffico che lo attraversa. Qualsiasi pacchetto che entra in una porta viene "inondato" o "ripetuto" su ogni altra porta, ad eccezione di quella di entrata. 
+         Nello specifico, ogni bit o simbolo viene ripetuto mentre scorre (con un ritardo minimo per l'interfaccia di linea). A causa di ciò, un ripetitore hub può solo ricevere e inoltrare a una singola velocità. 
+         Poiché ogni pacchetto viene ripetuto su ogni altra porta, le collisioni tra di essi influenzano l'intera rete, limitando la sua capacità complessiva.
+
+         Esistono applicazioni specializzate in cui un hub di rete può essere utile, ad esempio copiare il traffico su più apparati di rete. Gli switch di solito hanno una funzionalità chiamata port mirroring che fornisce la stessa funzionalità.
+    
+         Uno switch di rete crea virtualmente la connessione end-to-end del livello 1.
+    
+         La funzione di bridging di uno switch utilizza le informazioni acquisite dal livello 2 per selezionare per ogni pacchetto le porte specifiche a cui deve essere inoltrato, eliminando il requisito che ogni nodo venga presentato con tutto il traffico. 
+         Di conseguenza, le linee di connessione non vengono "scambiate" letteralmente, ma appaiono solo in quel modo a livello di pacchetto.
+    
+         Agli inizi degli anni 2000, c'era una piccola differenza di prezzo tra un hub e uno switch di fascia bassa.
+    <b><h2>Livello 2</h2></b>
+         Un bridge, che opera a livello di collegamento dati, può interconnettere un piccolo numero di dispositivi in una casa o in ufficio. Questo è un caso banale di bridging, 
+         in cui il bridge apprende l'indirizzo MAC di ciascun dispositivo connesso. I bridge bufferano anche un pacchetto in arrivo e adattano la velocità di trasmissione a quella della porta in uscita.
+
+         La tabella CAM ("Content Addressable Memory") memorizzata nella RAM è inizialmente vuota. Per ogni frame ethernet ricevuto lo switch apprende dall'indirizzo MAC di origine dei frame e lo aggiunge insieme 
+         all'interfaccia di input per creare un database di topologia. Lo switch quindi inoltra il frame all'interfaccia trovata nella tabella CAM in base all'indirizzo MAC di destinazione dei frame. Se l'indirizzo di destinazione è sconosciuto,
+         lo switch invia il frame su tutte le interfacce (tranne l'interfaccia di ingresso). Questo comportamento è chiamato flooding.
+    
+         I bridge classici possono anche interconnettersi utilizzando un protocollo Spanning Tree che disabilita i collegamenti in modo che la rete locale risultante sia senza cicli infiniti.
+         Al contrario dei router, i bridge spanning tree devono avere topologie con un solo percorso attivo tra due punti. Il vecchio protocollo dello spanning tree IEEE 802.1D potrebbe essere piuttosto lento.
+         Un protocollo Rapid Spanning Tree è stato introdotto come IEEE 802.1w. Il più recente standard Shortest path bridging è la prossima progressione logica e incorpora tutti i precedenti protocolli Spanning Tree che 
+         bloccavano il traffico su tutti tranne un percorso alternativo. Consente a tutti i percorsi di essere attivi con più di essi di costo uguale, fornisce topologie 
+         di livello 2 molto più grandi convergenza più veloce e migliora l'uso delle topologie mesh tramite maggiore larghezza di banda e ridondanza tra tutti i dispositivi consentendo al traffico di caricare la condivisione su tutti i percorsi di 
+         una rete mesh.
+    
+         Una volta che un bridge apprende gli indirizzi dei suoi nodi connessi, inoltra i frame del livello di collegamento dati utilizzando un metodo di inoltro di livello 2.
+    <b><h2>Livello 3</h2></b>
+     Entro i confini del livello fisico Ethernet, uno switch di livello 3 può eseguire alcune o tutte le funzioni normalmente eseguite da un router. La funzionalità layer-3 più comune è la consapevolezza del multicast IP tramite lo snooping IGMP. 
+     Con questa consapevolezza, uno switch di livello 3 può aumentare l'efficienza consegnando il traffico di un gruppo multicast solo alle porte in cui il dispositivo collegato ha segnalato che desidera ascoltare quel gruppo.
+
+     Le tre tipologie si differenziano solo se il buffer di trasmissione è vuoto e se il link di uscita è libero. Nel caso contrario le tre tipologie si riducono all'unica store-and-forward.
+    <b><h2>Livello 4</h2></b>
+     Mentre il significato esatto del termine switch di livello 4 dipende dal fornitore, quasi sempre inizia con una capacità di traduzione degli indirizzi di rete, ma aggiunge un tipo di distribuzione del carico basato sulle sessioni TCP.
+     Funzioni quali QoS e ACL (quest'ultima disponibile anche per livelli inferiori) permettono ad esempio di dare priorità diverse o bloccare pacchetti con contenuti particolari, specificabili nella programmazione dello switch.
+
+     Il dispositivo può includere un firewall stateful, un concentratore VPN o un gateway di sicurezza IPSec.
+    <b><h2>Livello 7</h2></b>
+     Gli switch di livello 7 possono distribuire il carico in base a localizzatori di risorse uniformi (URL) o utilizzando una tecnica specifica dell'installazione per riconoscere le transazioni a livello di applicazione.
+     Nel Web si utilizzano per le reti di distribuzione dei contenuti (CDN).
+        <img src="https://media.fs.com/images/community/wp-content/uploads/2017/11/Layer-2-Layer-3-in-OSI-model.jpg" width=" 550">
+                                                                                                                                                                                                                                                <a href="hub_switch.html">torna indietro</a>
+    </pre></body>
+</html>

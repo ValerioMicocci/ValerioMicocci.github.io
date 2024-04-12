@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simulazione di un hub</title>
+    </head>
+    <body>
+        <h1>Simulazione di un Hub</h1>
+        <form id="messageForm">
+            <label for="message">inserisci un messagio:</label>
+            <input type="text" id="message" required>
+            <button type = "submit">Invia</button>
+        </form>
+        <h2>PC Collegati all' Hub</h2>
+        <div id="pc1">PC1: </div>
+        <div id="pc2">PC2: </div>
+        <div id="pc3">PC3: </div>
+        <div id="pc4">PC4: </div>
+        <script>
+            document.getElementById("messageForm").addEventListener("submit", function(e)){
+                e.preventDefault();
+                const message= document.getElementById("message").value;
+                //invia il messaggio a tutti i pc simulati
+                document.getElementById("pc1").textContent += message + "<br>";
+                document.getElementById("pc2").textContent += message + "<br>";
+                document.getElementById("pc3").textContent += message + "<br>";
+                document.getElementById("pc4").textContent += message + "<br>";
+                //resetta la form
+                document.getElementById("messagge").value = "";
+            }
+        </script>
+    </body>
+</html>
