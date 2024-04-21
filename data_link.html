@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+
+
+    <title> Livello Network TCP/IP</title>
+    <style>
+.container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .important {
+            font-weight: bold;
+            color: #dc3545;
+        }
+
+        .important2 {
+            font-weight: bold;
+            color: #49dc35;
+        }
+        .important3 {
+            font-weight: bold;
+            color: #35a7dc;
+        }
+        .important4 {
+            font-weight: bold;
+            color: #dc35c0;
+        }
+        .important5 {
+            font-weight: bold;
+            color: #c3dc35;
+        }
+
+        .frametype {
+            margin-bottom: 10px;
+        }
+
+        .answer {
+            margin-bottom: 20px;
+        }
+
+ 
+    </style>
+<div class="container">
+    <h1>Riassunto Livello Network TCP/IP</h1>
+    <p>
+        <p>E' detto anche <b>IP Layer</b> dal nome del protocollo che consente il funzionamento di internet . Si occupa dell'interconnessione delle reti. </p>
+        <p>Le funzioni principali del livello Network sono :</p>
+        <p><span class="important">1. </span>gestisce l’instradamento (routing) dei pacchetti, raccolta delle 
+            informazioni sulla topologia della rete</p>
+        <p><span class="important">2. </span>controlla gli errori di trasmissione (CRC) sull’intestazione dei pacchetti</p>
+        <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20230811153121/osi-2.jpg"width = " 550"></p>
+    </p>
+    <p>
+        <p class="important"><b>Caratteristiche generali </b></p>
+    IP offre un servizio di tipo connection-less, cioè una applicazione trasmette i pacchetti IP 
+    (detti anche “datagram”) senza stabilire una connessione preliminare fisica o logica tra 
+    mittente e destinatario (a contrario di ciò che avviene nella telefonia). Questo implica che 
+    per esempio il cammino (path) di ciascun pacchetto è instradato in modo indipendente 
+    dagli altri. I pacchetti possono anche seguire cammini diversi e indipendenti. 
+    Il protocollo è unreliable, ovvero IP non è in grado di riconoscere la perdita di un pacchetto. 
+    Tuttavia in caso di congestione e di perdita, è il protocollo di livello superiore (livello 
+    Transport) denominato: 
+    Transmission Control Protocol il quale si incarica di effettuare la ritrasmissione delle 
+    porzioni di dati perse.
+    </p>
+    <p>
+        Ogni singolo pacchetto IP si <b>suddivide in due porzioni</b>: 
+        <p><span class="important">1. </span><b>intestazione</b>: per trasportare informazioni di controllo, cioè di utilità per il protocollo 
+        stesso .
+        <p><span class="important">2. </span><b>dati</b>: per il trasporto dei dati generati dall’applicazione.
+        <p><span class="important"><img src="https://pc-solucion.es/wp-content/uploads/2018/04/que-es-ipv4-300x182.jpg" width="550"></span></p>
+    </p>
+
+    <div class="frametype">
+    <div class="answer">
+        <p class="important"> <b>Struttura dell’indirizzo IP </b></p>
+        <p><span class="important">1. </span>L'indirizzo di rete può essere di 32 bit (IPv4) o di 128 bit (IPv6) e si usa IPv6 soprattutto per risolvere il problema dell’esaurimento degli indirizzi 
+         e viene suddiviso in due parti di lunghezza variabile: </p> 
+        <p>° Network ID</p> 
+        <p>° Host ID</p> 
+        <p><span class="important">2. </span> L’instradamento avviene attraverso la parte del Network ID, mentre l' Host ID serve per 
+        identificare uno specifico sistema (router, PC, workstation, stampante…) collegato ad una 
+        rete.    </div>
+    <div class="answer">
+        <p class="important"><b>Le classi degli indirizzi</b>:</p>
+        <p>Esistono 4 classi di indirizzi, per ciascuna classe la lunghezza del Network ID è fissata. Il 
+            tipo di classe a cui appartiene un dato indirizzo viene identificato attraverso i primi 4 bit 
+            dell’indirizzo stesso. 
+            <p>° <span class="important2">CLASSE A </span>: prefisso “0”, NetID = 8 bit (1-126)</p> 
+            <p>° <span class="important3">CLASSE B </span>: prefisso “10”, NetID = 16 bit (128-191) </p>
+            <p>° <span class="important4">CLASSE C </span>: prefisso “110”, NetID = 24 bit (192-223) </p>
+            <p>° <span class="important5">CLASSE D </span>: prefisso “1110” identifica un indirizzo di multicast (cioè un insieme di più 
+            sistemi, ciascuno contraddistinto da un proprio indirizzo di classe A, B o C - indirizzo IP 
+            unicast ) (224-239)</p>
+        </p>
+
+    </div>
+</div>
+</body>
+</html>
